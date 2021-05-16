@@ -1,5 +1,5 @@
 opencv-python == 4.5.2.52
-streamlit == 0.78.0
+streamlit
 time 
 datetime
 

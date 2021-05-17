@@ -2,8 +2,8 @@ import cv2
 import time
 import datetime
 import streamlit as st
+import streamlit.components.v1 as components
 
-import streamlit.components as stc
 
 # Stolen from https://www.youtube.com/watch?v=PLKLsPDZ1t0&t=390s
 
@@ -23,9 +23,13 @@ start = time.time()
 st.title("AI Security Webcam")
 st.write("Face Detection with Computer Vision")
 
-st.write("Streamlit library does not support the option to show the live video from your webcam, but every time it detects a face it will show you its photo.")
+#st.write("Streamlit library does not support the option to show the live video from your webcam, but every time it detects a face it will show you its photo.")
 
 clickhere = st.button("Start Webcam")
+
+htmlfile = open("video.html", 'r', encoding='utf-8')
+source_code = htmlfile.read()
+webcam = components.html(source_code)
 
 #st.write("Press 'q' to close the App")
 
